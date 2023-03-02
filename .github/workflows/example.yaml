@@ -16,7 +16,7 @@ jobs:
         id: time
         uses: jingming/format-timezone@main
         with:
-          format: "YYYY-MM-DD HH:mm:ss"
+          format: "yyyy-MM-dd HH:mm:ss"
           timezone: ${{ inputs.timezone }}
       - name: Print output
         shell: bash
