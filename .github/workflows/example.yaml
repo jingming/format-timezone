@@ -1,0 +1,20 @@
+name: Output the current time in a timezone
+
+on:
+  workflow_dispatch:
+    inputs:
+      timezone:
+        description: 'Timezone database name. eg. America/Los_Angeles'
+        required: true
+
+
+jobs:
+  output-time:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get time in ${{ inputs.timezone }}
+        id: time
+        uses: jingming/format-timezone@main
+        with:
+          format: "YYYY-MM-DD HH:mm:ss"
+          timezone: ${{ inputs.timezone }}
