@@ -1,11 +1,11 @@
 const core = require('@actions/core')
+const { formatInTimeZone } = require('date-fns-tz')
 
 async function run() {
-  console.log(core.getInput('timezone'))
-  console.log(core.getInput('format'))
+  const time = formatInTimeZone(new Date(), core.getInput('timezone'), core.getInput('format'))
+  console.log(`Formatted time: ${time}`)
 
-
-  // updater.update(core.getInput('owner'), core.getInput('repo'), core.getInput('change-type'))
+  core.setOutput('time', time)
 }
 
 run()

@@ -9,6 +9,10 @@ inputs:
     description: 'Style to output the time'
     required: true
 
+outputs:
+  time:
+    description: 'Formatted string'
+
 runs:
   using: 'node16'
   main: 'dist/index.js'
