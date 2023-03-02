@@ -1,0 +1,31 @@
+{
+  "name": "format-timezone",
+  "version": "1.0.0",
+  "description": "Update semver tags for a GitHub Action",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint",
+    "build": "ncc build index.js -o dist"
+  },
+  "author": "niu@jingming.ca",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@octokit/rest": "^19.0.5",
+    "@vercel/ncc": "^0.34.0",
+    "date-fns-tz": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-filename-rules": "^1.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.0.4",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.1",
+    "eslint-plugin-storybook": "^0.6.4",
+    "prettier": "^2.7.1"
+  }
+}

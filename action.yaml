@@ -1,0 +1,14 @@
+name: 'Output the current time in a timezone'
+description: 'Output the current time in a timezone. eg. America/Los_Angeles'
+
+inputs:
+  timezone:
+    description: 'Timezome name'
+    required: true
+  format:
+    description: 'Style to output the time'
+    required: true
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
